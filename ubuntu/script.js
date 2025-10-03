@@ -41,7 +41,8 @@ Java.perform(function() {
           }
         },
         onLeave(retval) {
-          retval.replace(1)
+          if (this.block)
+            retval.replace(1)
         }
       })
     }
