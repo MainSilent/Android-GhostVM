@@ -2,7 +2,7 @@
 set -e
 
 
-PACKAGE_NAME=""
+PACKAGE_NAME="com.example"
 
 
 DEBIAN_FRONTEND=noninteractive
@@ -25,4 +25,4 @@ pip3 install frida frida-tools
 
 
 echo "------------ Run Frida Script ------------"
-frida -U -f $PACKAGE_NAME -l "/ubuntu/index.js"
+frida -U -f $PACKAGE_NAME -l "/ubuntu/script.js"
