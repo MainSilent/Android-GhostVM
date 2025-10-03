@@ -37,7 +37,7 @@ Java.perform(function() {
           const path = args[0].readUtf8String()
           if (RootBin.includes(path)) {
             this.block = true
-            console.log("[!] File Check Intercepted")
+            console.log("[!] File Check Intercepted: " + path)
           }
         },
         onLeave(retval) {
