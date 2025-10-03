@@ -1,0 +1,22 @@
+services:
+  redroid:
+    image: redroid/redroid:10.0.0-latest
+    restart: no
+    shm_size: "4g"
+    privileged: true
+    ports:
+      - "5555:5555" # ADB
+    volumes:
+      - "${HOME}/redroid-data:/data"
+      - "./redroid:/redroid"
+    command: ["sh", "-c", "exec /entrypoint.sh ro.secure=0"]
+
+  ubuntu:
+    image: ubuntu:25.04
+    stdin_open: true
+    tty: true
+    volumes:
+      - "./ubuntu:/ubuntu"
+    depends_on:
+      - redroid
+    command: ["sh", "/ubuntu/setup.sh"]
