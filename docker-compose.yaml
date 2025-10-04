@@ -1,8 +1,8 @@
 services:
   redroid:
-    image: redroid/redroid:10.0.0-latest
+    image: redroid/redroid:14.0.0-latest
     restart: no
-    shm_size: "4g"
+    shm_size: "8g"
     privileged: true
     ports:
       - "5555:5555" # ADB
