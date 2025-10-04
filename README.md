@@ -17,7 +17,9 @@
 ### How to start:
 
 ```
-Download frida server and move it to /redroid/frida-server
+Download x86_64 frida server and move it to /redroid/frida-server
+
+Dwonload arm64 friga gadget and movie it to /ubuntu/gadget-android-arm64.so
 
 Start container via `sudo docker compose up --remove-orphans`
 

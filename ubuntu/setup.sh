@@ -25,4 +25,6 @@ pip3 install frida frida-tools
 
 
 echo "------------ Run Frida Script ------------"
+mkdir -p /root/.cache/frida/
+cp /ubuntu/gadget-android-arm64.so /root/.cache/frida/
 frida -U -f $PACKAGE_NAME -l "/ubuntu/script.js"
